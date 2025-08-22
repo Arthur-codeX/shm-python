@@ -1,6 +1,7 @@
 import psycopg
 from psycopg_pool import ConnectionPool
 
+# sqlalchemy -> orm ->
 #Boiler Plate
 class PG:
 
