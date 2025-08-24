@@ -1,6 +1,6 @@
 from app import Base
 
-from sqlalchemy import Column,JSON,BIGINT,DateTime,func,ForeignKey
+from sqlalchemy import Column,JSON,BIGINT,Boolean,DateTime,func,ForeignKey
 
 #1:1 -> unique 
 
@@ -9,6 +9,8 @@ class Game(Base):
     __tablename__="game"
 
     id=Column(BIGINT,primary_key=True,autoincrement=True)
+
+    is_white_turn=Column(Boolean,nullable=False,default=True)
     
     # 
     player_id=Column(BIGINT,ForeignKey("player.id"),unique=True,nullable=False)

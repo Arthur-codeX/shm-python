@@ -1,1 +1,1 @@
-from .db import Base,SessionLocal
+from .db import Base,SessionLocal,engine

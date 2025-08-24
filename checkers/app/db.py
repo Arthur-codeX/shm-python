@@ -23,7 +23,7 @@ db_credentials={
 #BUILD URL
 DATABASE_URL=URL.create(**db_credentials)
 
-engine=create_engine(DATABASE_URL,echo=True,future=True)
+engine=create_engine(DATABASE_URL,echo=False,future=True)
 
 
 SessionLocal=sessionmaker(bind=engine,autoflush=False,autocommit=False)
